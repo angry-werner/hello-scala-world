@@ -73,3 +73,8 @@ def otherSort[A: Ordering](as: List[A]): List[A] = {???}
 val result = sort(List(1, 2))
 
 val otherResult = sort(List(1.2, 2.3))(using Ordering[Double])
+
+case class Foo(a: String)
+case class Bar(b: String)
+
+val foo: (Foo => Bar) = (x) => Bar(x.a)
